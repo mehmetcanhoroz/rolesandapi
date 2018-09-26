@@ -1,9 +1,8 @@
 IMPORT db.sql
 
 
-- Edit roles is under developing : NEXT 1st push
-- JWT already installed but will be activated : NEXT 2nd push
-- APIs are under developing : NEXT 3rd push
+- JWT already installed but will be activated : NEXT 1nd push
+- APIs are under developing : NEXT 2rd push
 
 Pre created user
 admin@admin.com 123456789
