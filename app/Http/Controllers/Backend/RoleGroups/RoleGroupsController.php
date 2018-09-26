@@ -63,9 +63,6 @@ class RoleGroupsController extends Controller
         }*/
 
         RoleRoleGroup::where("role_group_id", $request->id)->delete();
-        User::where("role_group_id", $request->id)->update([
-            "role_group_id" => 0
-        ]);
 
         $insert = [];
 

@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(['middleware' => 'jwt.auth'], function () {
+
+    Route::post('me', 'AuthController@me');
+    Route::post('roles', 'AuthController@getRoles');
+    Route::post('myroles', 'AuthController@getMyRoles');
+    Route::post('logout', 'AuthController@logout');
+
+});
+
+Route::post("signup", "AuthController@register");
+Route::post('login', 'AuthController@login');
