@@ -50,7 +50,8 @@ Route::group(["prefix" => "admin", "as" => "backend", "namespace" => "Backend", 
 
     Route::group(["prefix" => "rolegroups", "as" => ".rolegroups", "namespace" => "RoleGroups"], function () {
         Route::get("/", "RoleGroupsController@show")->name(".show");
-        Route::post("/edit/{id}", "RoleGroupsController@editShow")->name(".editShow");
+        Route::get("/edit/{id}", "RoleGroupsController@editShow")->name(".editShow");
+        Route::post("/edit", "RoleGroupsController@edit")->name(".edit");
         Route::post("/create", "RoleGroupsController@create")->name(".create");
         Route::get("/create", "RoleGroupsController@createShow")->name(".createShow");
         Route::post("/delete", "RoleGroupsController@delete")->name(".delete");
